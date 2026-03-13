@@ -127,14 +127,14 @@ footer {
 /* 詳細度を高めて色を指定 */
 .container footer p, 
 .container footer p small {
-    color: #767676;
+    color: #555555;
 }
 
 .container footer .selectable-email {
     user-select: all;
     -webkit-user-select: all;
     color: #1a1a1a;
-    border-bottom: 1px dotted #767676;
+    border-bottom: 1px dotted #555555;
     cursor: text;
     padding: 2px 4px;
     background-color: rgba(0,0,0,0.02);

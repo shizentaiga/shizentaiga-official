@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fcfcfc;
-    color: #2b2b2b; /* メインテキスト */
+    color: #2b2b2b;
     font-size: 16px;
     font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", serif;
     line-height: 1.8;
@@ -37,7 +37,7 @@ h1 {
 
 .subtitle {
     font-size: 0.9rem;
-    color: #555; /* #666より微修正：可読性を高めつつ軽やかさを維持 */
+    color: #555;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
 }
@@ -114,20 +114,26 @@ img {
 }
 
 /* ---------------------------------------
-    Footer & Contact (Copy-Friendly)
+    Footer & Contact (Refined for Accessibility)
 --------------------------------------- */
 footer {
     margin-top: 100px;
     text-align: center;
     font-size: 0.8rem;
-    color: #767676; /* #999から修正：Googleの視認性基準（4.5:1）をクリア */
+}
+
+/* 特定のタグに対する色の強制適用（コントラスト比の解決） */
+footer, 
+footer p, 
+footer small {
+    color: #767676 !important;
 }
 
 .selectable-email {
     user-select: all;
     -webkit-user-select: all;
-    color: #1a1a1a;
-    border-bottom: 1px dotted #767676; /* フッターに合わせて調整 */
+    color: #1a1a1a !important; /* メールアドレスはより濃く */
+    border-bottom: 1px dotted #767676;
     cursor: text;
     padding: 2px 4px;
     background-color: rgba(0,0,0,0.02);

@@ -8,6 +8,7 @@ body {
     color: #2b2b2b;
     font-size: 16px;
     font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", serif;
+    font-weight: 400; /* 明示的に指定し視認性を確保 */
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
 }
@@ -19,7 +20,7 @@ body {
 }
 
 @media (max-width: 600px) {
-    .container { padding: 60px 25px; }
+    .container { padding: 60px 20px; } /* モバイルのパディングを微調整 */
     h1 { font-size: 1.8rem; }
 }
 
@@ -36,16 +37,28 @@ h1 {
 }
 
 .subtitle {
+    display: block; /* 改行させる */
     font-size: 0.9rem;
     color: #555;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 5px;
 }
 
 /* ---------------------------------------
-    Sections & Components
+    Sections
 --------------------------------------- */
-section { margin-bottom: 80px; }
+section { 
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+}
+
+/* hrの代わりにsectionの境界を意識 */
+section:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+}
 
 h2 {
     font-size: 1.2rem;
@@ -56,18 +69,10 @@ h2 {
     letter-spacing: 0.1rem;
 }
 
-hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 60px 0;
-}
-
-/* ---------------------------------------
-    Profile Image (LCP & CLS Optimization)
---------------------------------------- */
+/* (Profile Image, Buttons, Links は変更なしのため維持) */
 .profile-image-area {
     margin-bottom: 30px;
-    background-color: #f0f0f0; 
+    background-color: #f8f8f8; 
     aspect-ratio: 800 / 1065;
     max-width: 300px;
     margin-left: auto;
@@ -82,9 +87,6 @@ img {
     border-radius: 2px;
 }
 
-/* ---------------------------------------
-    Buttons & Links
---------------------------------------- */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -114,7 +116,7 @@ img {
 }
 
 /* ---------------------------------------
-    Footer & Contact (Refined for Accessibility)
+    Footer (Detailed Selectors to avoid !important)
 --------------------------------------- */
 footer {
     margin-top: 100px;
@@ -122,17 +124,16 @@ footer {
     font-size: 0.8rem;
 }
 
-/* 特定のタグに対する色の強制適用（コントラスト比の解決） */
-footer, 
-footer p, 
-footer small {
-    color: #767676 !important;
+/* 詳細度を高めて色を指定 */
+.container footer p, 
+.container footer p small {
+    color: #767676;
 }
 
-.selectable-email {
+.container footer .selectable-email {
     user-select: all;
     -webkit-user-select: all;
-    color: #1a1a1a !important; /* メールアドレスはより濃く */
+    color: #1a1a1a;
     border-bottom: 1px dotted #767676;
     cursor: text;
     padding: 2px 4px;
@@ -140,15 +141,6 @@ footer small {
     border-radius: 2px;
 }
 
-/* ---------------------------------------
-    Utilities
---------------------------------------- */
-.pc-only {
-    display: none;
-}
-
-@media (min-width: 768px) {
-    .pc-only {
-        display: inline;
-    }
-}
+/* Utilities */
+.pc-only { display: none; }
+@media (min-width: 768px) { .pc-only { display: inline; } }

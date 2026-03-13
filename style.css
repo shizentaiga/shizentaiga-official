@@ -1,0 +1,136 @@
+/* ---------------------------------------
+   General Styles
+--------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+    color: #2b2b2b;
+    font-size: 16px;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+@media (max-width: 600px) {
+    .container { padding: 60px 25px; }
+    h1 { font-size: 1.8rem; }
+}
+
+header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------
+   Sections & Components
+--------------------------------------- */
+section { margin-bottom: 80px; }
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-left: 1px solid #1a1a1a;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    letter-spacing: 0.1rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 60px 0;
+}
+
+/* ---------------------------------------
+   Profile Image (LCP & CLS Optimization)
+--------------------------------------- */
+.profile-image-area {
+    margin-bottom: 30px;
+    background-color: #f0f0f0; /* 読込中のプレースホルダー色 */
+    aspect-ratio: 800 / 1065;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+/* ---------------------------------------
+   Buttons & Links
+--------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li { margin-bottom: 15px; }
+
+.link-list a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ---------------------------------------
+   Footer & Contact (Copy-Friendly)
+--------------------------------------- */
+footer {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.selectable-email {
+    /* JS不要で1クリック全選択を可能にする設定 */
+    user-select: all;
+    -webkit-user-select: all;
+    color: #1a1a1a;
+    border-bottom: 1px dotted #999;
+    cursor: text;
+    padding: 2px 4px;
+    background-color: rgba(0,0,0,0.02);
+    border-radius: 2px;
+}

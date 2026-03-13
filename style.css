@@ -1,11 +1,11 @@
 /* ---------------------------------------
-   General Styles
+    General Styles
 --------------------------------------- */
 body {
     margin: 0;
     padding: 0;
     background-color: #fcfcfc;
-    color: #2b2b2b;
+    color: #2b2b2b; /* メインテキスト */
     font-size: 16px;
     font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", serif;
     line-height: 1.8;
@@ -37,13 +37,13 @@ h1 {
 
 .subtitle {
     font-size: 0.9rem;
-    color: #666;
+    color: #555; /* #666より微修正：可読性を高めつつ軽やかさを維持 */
     letter-spacing: 0.3rem;
     text-transform: uppercase;
 }
 
 /* ---------------------------------------
-   Sections & Components
+    Sections & Components
 --------------------------------------- */
 section { margin-bottom: 80px; }
 
@@ -63,11 +63,11 @@ hr {
 }
 
 /* ---------------------------------------
-   Profile Image (LCP & CLS Optimization)
+    Profile Image (LCP & CLS Optimization)
 --------------------------------------- */
 .profile-image-area {
     margin-bottom: 30px;
-    background-color: #f0f0f0; /* 読込中のプレースホルダー色 */
+    background-color: #f0f0f0; 
     aspect-ratio: 800 / 1065;
     max-width: 300px;
     margin-left: auto;
@@ -83,7 +83,7 @@ img {
 }
 
 /* ---------------------------------------
-   Buttons & Links
+    Buttons & Links
 --------------------------------------- */
 .btn {
     display: inline-block;
@@ -114,23 +114,35 @@ img {
 }
 
 /* ---------------------------------------
-   Footer & Contact (Copy-Friendly)
+    Footer & Contact (Copy-Friendly)
 --------------------------------------- */
 footer {
     margin-top: 100px;
     text-align: center;
     font-size: 0.8rem;
-    color: #999;
+    color: #767676; /* #999から修正：Googleの視認性基準（4.5:1）をクリア */
 }
 
 .selectable-email {
-    /* JS不要で1クリック全選択を可能にする設定 */
     user-select: all;
     -webkit-user-select: all;
     color: #1a1a1a;
-    border-bottom: 1px dotted #999;
+    border-bottom: 1px dotted #767676; /* フッターに合わせて調整 */
     cursor: text;
     padding: 2px 4px;
     background-color: rgba(0,0,0,0.02);
     border-radius: 2px;
+}
+
+/* ---------------------------------------
+    Utilities
+--------------------------------------- */
+.pc-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .pc-only {
+        display: inline;
+    }
 }

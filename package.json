@@ -1,0 +1,7 @@
+{
+  "name": "shizentaiga-official-meta-generator",
+  "version": "1.2.0",
+  "scripts": {
+    "build": "node generate-meta.js"
+  }
+}

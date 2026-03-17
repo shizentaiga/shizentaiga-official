@@ -37,13 +37,6 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-.subtitle {
-    font-size: 0.9rem;
-    color: #555555;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-}
-
 /* ---------------------------------------
     Sections & Components
 --------------------------------------- */
@@ -79,7 +72,7 @@ hr {
 .profile-image-area {
     margin-bottom: 30px;
     background-color: #f0f0f0; 
-    aspect-ratio: 800 / 1065;
+    aspect-ratio: 3 / 4;
     /* 写真自体の最大幅を少し絞り、テキストとの親和性を高めます */
     max-width: 280px; 
     margin-left: auto;
@@ -90,7 +83,7 @@ img {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 2px;
 }
 

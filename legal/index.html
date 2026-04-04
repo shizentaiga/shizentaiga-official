@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="shizentaiga.comの利用規約、プライバシーポリシー、特定商取引法に基づく表記、返金規定等の法務情報を掲載しています。">
     <title>Legal Information | shizentaiga.com</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         :root {
-            --text-color: #333;
-            --light-gray: #f9f9f9;
-            --border-color: #eee;
-            --accent-color: #555;
+            /* コントラスト比改善: テキストをより濃く、視認性を向上 */
+            --text-color: #222; 
+            --light-gray: #fcfcfc;
+            --border-color: #ddd;
+            --sub-text-color: #555;
+            --last-updated-color: #666; /* 指摘対応: #999から変更しコントラストを確保 */
         }
         body {
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
             line-height: 1.8;
             color: var(--text-color);
-            max-width: 800px;
+            max-width: 840px; /* わずかに幅を広げ、ゆとりを確保 */
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 24px; /* 上下の余白を増やして開放感を出す */
             background-color: #fff;
         }
         header {
-            margin-bottom: 60px;
+            margin-bottom: 80px; /* 余白を広めに設定 */
             text-align: center;
         }
         h1 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 500;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
+            margin-bottom: 30px;
         }
         nav ul {
             list-style: none;
@@ -36,61 +40,71 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            font-size: 0.9rem;
+            gap: 20px; /* リンク間の間隔を広げる */
+            font-size: 0.95rem;
         }
         nav a {
-            color: var(--text-color);
+            color: var(--sub-text-color);
             text-decoration: none;
             border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
         }
         nav a:hover {
+            color: var(--text-color);
             border-bottom: 1px solid var(--text-color);
         }
         section {
-            margin-bottom: 80px;
-            scroll-margin-top: 40px;
+            margin-bottom: 100px; /* セクション間の余白を拡大し、情報の混同を防ぐ */
+            scroll-margin-top: 60px;
         }
         h2 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
         p {
-            margin-bottom: 1.5em;
+            margin-bottom: 1.8em; /* 行間の余裕 */
+        }
+        strong {
+            font-weight: 600;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 0.95rem;
+            margin-top: 25px;
+            font-size: 1rem;
         }
         th, td {
             text-align: left;
-            padding: 15px;
+            padding: 18px; /* セル内の余白を増やして読みやすく */
             border-bottom: 1px solid var(--border-color);
             vertical-align: top;
         }
         th {
-            width: 30%;
+            width: 32%;
             background-color: var(--light-gray);
             font-weight: 500;
+            color: var(--sub-text-color);
         }
         .last-updated {
-            font-size: 0.8rem;
-            color: #999;
+            font-size: 0.85rem;
+            color: var(--last-updated-color); /* コントラスト比改善済み */
             text-align: right;
-            margin-top: 40px;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px dotted var(--border-color);
         }
         @media print {
             nav, .no-print { display: none; }
             body { padding: 0; color: #000; }
             section { page-break-inside: avoid; }
         }
-        @media (max-width: 600px) {
-            th, td { display: block; width: 100%; }
-            th { border-bottom: none; padding-bottom: 5px; }
+        @media (max-width: 640px) {
+            th, td { display: block; width: 100%; box-sizing: border-box; }
+            th { border-bottom: none; padding-bottom: 8px; background-color: transparent; font-weight: 600; }
+            td { padding-top: 0; padding-bottom: 20px; }
         }
     </style>
 </head>
@@ -115,7 +129,7 @@
         <h2>利用規約 (Terms of Service)</h2>
         <p>本サービスは特定の成果を保証するものではなく、利用者の自己責任において利用するものとします。</p>
         <p>予約の変更・キャンセルは、<strong>サービス提供開始日の3日前（72時間前）まで</strong>とし、それ以降は料金の100%をキャンセル料として申し受けます。</p>
-        <p>サービス内容の無断転載や転売を禁じ、紛争が生じた際は当方の所在地を管轄する裁判所を専属的合意管轄とします。</p>
+        <p>サービス内容の無断転載や転売を禁じ、紛議が生じた際は当方の所在地を管轄する裁判所を専属的合意管轄とします。</p>
     </section>
 
     <section id="privacy">
